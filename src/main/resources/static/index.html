@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobilletter</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="JS.js"></script>
+</head>
+<body>
+<div class="jumbotron" style="background-color: #232323; color: white">
+    <h1>Bestilling av kinobilletter</h1>
+</div>
+
+<div class="col-md-4">
+    <text>Velg film: </text>
+
+    <select class="btn btn-dark" id="film" required>
+        <option>Velg film her</option>
+        <option class="btn btn-dark">Shrek 1</option>
+        <option class="btn btn-dark">Shrek 2</option>
+        <option class="btn btn-dark">Shrek 3</option>
+    </select>
+
+    <text id="ingenFilm" style="color: red"></text>
+</div>
+<br>
+
+<div class="form-group">
+    <div class="col-md-1">
+        <label for="Antall">Antall</label>
+        <input type="text" class="form-control" id="antall"/>
+        <text id="feilAntall" style="color: red"></text>
+        <br>
+    </div>
+    <div class="col-md-3">
+        <label for="fornavn">Fornavn</label>
+        <input type="text" class="form-control" id="fornavn"/>
+        <text id="feilFornavn" style="color: red"></text>
+        <br>
+    </div>
+
+    <div class="col-md-3">
+        <label for="etternavn">Etternavn</label>
+        <input type="text" class="form-control" id="etternavn"/>
+        <text id="feilEtternavn" style="color: red"></text>
+        <br>
+    </div>
+
+    <div class="col-md-3">
+        <label for="telefonnr">Telefonnr</label>
+        <input type="text" class="form-control" id="telefonnr"/>
+        <text id="feilTelefonnr" style="color: red"></text>
+        <br>
+    </div>
+
+    <div class="col-md-3">
+        <label for="epost">Epost</label>
+        <input type="text" class="form-control" id="epost"/>
+        <text id="feilEpost" style="color: red"></text>
+        <br>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <button onclick="kjøpBillett()" class="btn btn-dark">Kjøp Billett</button>
+</div>
+<br><br>
+
+<div class="col-md-12">
+    <h2> Alle billetter</h2>
+
+<div id="alleKunder"></div>
+</div>
+<br>
+<div class="col-md-3">
+<button onclick="slettAlt()" class="btn btn-dark">Slett alle billettene</button>
+</div>
+</body>
+</html>
