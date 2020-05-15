@@ -18,6 +18,8 @@ public class Kunde {
         this.epost = epost;
     }
 
+    public Kunde(){}
+
     public String getFilm() {
         return film;
     }

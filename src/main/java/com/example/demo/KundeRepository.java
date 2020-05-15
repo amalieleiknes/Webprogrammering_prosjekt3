@@ -11,7 +11,7 @@ import java.util.List;
 public class KundeRepository {
 
     @Autowired
-    private JdbcTemplate db;
+    public JdbcTemplate db;
 
 
     public void lagreKunde(Kunde innKunde) {

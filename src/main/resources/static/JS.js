@@ -91,7 +91,7 @@ function kjøpBillett() {
         };
 
         // skriver ut alle attributtene og formaterer de inn i en tabell
-        $.get("/lagreKunde", kunde, function() {
+        $.post("/lagreKunde", kunde, function() {
             skrivUtAlt();
         });
 
@@ -112,8 +112,8 @@ function slettAlt() {
 }
 
 function skrivUtAlt() {
-    $.get("/skrivUtAlt", function (data) {
-        formaterTabell(data);
+    $.get("/skrivUtAlt", function(billettene) {
+        formaterTabell(billettene);
     });
 }
 
