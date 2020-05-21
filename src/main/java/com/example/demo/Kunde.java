@@ -1,6 +1,7 @@
 package com.example.demo;
 
 public class Kunde {
+    private int id;
     private String film;
     private int antall;
     private String fornavn;
@@ -8,8 +9,9 @@ public class Kunde {
     private String telefonnr;
     private String epost;
 
-    public Kunde(String film, int antall, String fornavn,
+    public Kunde(int id, String film, int antall, String fornavn,
                  String etternavn, String telefonnr, String epost) {
+        this.id = id;
         this.film = film;
         this.antall = antall;
         this.fornavn = fornavn;
@@ -19,6 +21,14 @@ public class Kunde {
     }
 
     public Kunde(){}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFilm() {
         return film;
